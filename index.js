@@ -39,22 +39,9 @@ const playGame = () => {
 const updateDOM = (moveOne, moveTwo, outcome) => {
   const playerOneMove = document.getElementById("player-one-move__img");
   const playerTwoMove = document.getElementById("player-two-move__img");
-  switch (moveOne) {
-    case "rock":
-      playerOneMove.src = "./images/rock.png"; break;
-    case "paper":
-      playerOneMove.src = "./images/paper.png"; break;
-    case "scissors":
-      playerOneMove.src = "./images/scissors.png"; break;
-  };
-  switch (moveTwo) {
-    case "rock":
-      playerTwoMove.src = "./images/rock.png"; break;
-    case "paper":
-      playerTwoMove.src = "./images/paper.png"; break;
-    case "scissors":
-      playerTwoMove.src = "./images/scissors.png"; break;
-  };
+  playerOneMove.src = "./images/"+moveOne+".png";
+  playerTwoMove.src = "./images/"+moveTwo+".png";
+
   const myWinner = document.createElement("h3");
   myWinner.textContent = outcome;
   const body = document.querySelector("body");
